@@ -1,0 +1,263 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* * {
+    outline: 1px solid red;
+} */
+
+.wrapper{
+    /* background-color: pink; */
+    background-image: url(240_F_494524607_aDLrF9Da40LIz1YBH4THqxuFgqHL40Ay.jpg);
+    /* background-image: url(wrapper01.jpg); */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+main{
+    display: flex;
+    /* border: 2px solid; */
+    height: 70%;
+    width: 80%;
+    max-height: 70%;
+    max-width: 950px;
+    flex-direction: column;
+}
+.upper-div{
+    /* background-color: orange; */
+    height: 40%;
+    width: 100%;
+    /* padding: 2% 2% 2% 2%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+
+}
+
+.bubble {
+    width: 40%;
+    /* display: flex;
+    flex-wrap: wrap; */
+    height: 25%;
+    max-width: 65%;
+    /* min-width: 80%; */
+    position: absolute;
+    right: 30%;
+    /* top: 10%; */
+    display: flex;
+    /* padding: 2%; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* font-size: 5vmin; */
+    /* overflow: scroll;
+    overscroll-behavior:; */
+    font-size: 2rem;
+    background: #ffd;
+    box-shadow: 0 -0.25vmin 0 #000, 0 0.125vmin 0 #000;
+    font-family: "Comic Sans MS", "Comic Neue", sans-serif;
+    border-radius: 15px; 
+    /* overflow: scroll; */
+    
+    /* box-shadow: 1px 1px 20px gold; */
+}
+.bubble-content {
+    max-height: 100%;   /* Ensures scrolling happens */
+    overflow-y: auto;   /* Enables vertical scrolling */
+    padding: 5px;       /* Adds some spacing inside */
+    /* background-color: aliceblue; */
+}
+.bubble::before {
+    content: "";
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    bottom: -51%;
+    border-radius: 50%;
+    left: 10%;
+    box-shadow: 0.5vmin 0, 2vmin -0.5vmin #ffd, 2vmin -0.5vmin 0.5vmin;
+    clip-path: polygon(0% 49%, 150% 48%, 150% 100%, 0% 100%);
+}
+
+.lower-div{
+    /* background-color: antiquewhite; */
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.cat-picture{
+    /* border:  2px dashed red; */
+    height: 97%;   
+    display: flex;
+    flex-wrap: wrap;
+    /* background-image: url(cat-animate01.jpg); */
+    border-radius: 140%;
+    box-shadow: 1px 1px 50px black;
+    width: 57%;
+    /* background-size: contain; */
+    background-blend-mode:color-dodge;
+    /* background-repeat: no-repeat; */
+}
+.buttons{
+    /* border:  2px dashed red; */
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(39, 213, 213, 0.125);
+    /* background-color: rgba(118, 57, 129, 0.125); */
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    height: 100%;
+    gap: 10px;
+}
+button{
+    height: 30%;
+    width: 100%;
+    background-color: white;
+    font-size: 1.3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 0;
+    border-radius: 20px;
+    &:hover{
+        cursor: pointer;
+        opacity: 90%;
+    }
+}
+@media (max-width:1100px) {
+    /* .lower-div{
+        flex-direction: column;
+        background-color: red;
+        justify-content: center;
+        align-items: center;
+    } */
+    main{
+        /* background-color: pink; */
+        height: 80%;
+        max-height: 80%;
+    }
+    .cat-picture{
+        height: 75%;
+        width: 50%;
+    }
+    .buttons{
+        width: 37%;
+        height: 60%;
+    }
+    button{
+        height: 50%;
+        width: 100%;
+    }
+    .lower-div{
+        /* background-color: orange; */
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .bubble{
+        font-size: 1.9rem;
+        width: 70%;
+        right: 20%;
+    }
+}
+@media (max-width:850px) {
+    .lower-div{
+        flex-direction: column;
+        /* background-color: red; */
+        justify-content: center;
+        align-items: center;
+        height: 70%;
+    }
+    .upper-div{
+        /* margin-top: 10%; */
+        /* background-color: pink; */
+        height: 30%;
+        width: 100%;
+        justify-content: right;
+        align-items:center;
+    }
+    main{
+        height: 90%;
+        max-height: 90%;
+    }
+    .buttons{
+        height: 35%;
+        width: 60%;
+        /* background-color: #ffd; */
+    }
+    button{
+        height: 65%;
+        /* background-color: #000; */
+    }
+    .bubble{
+        width: 90%;
+        border-radius: 10%;
+        /* left: 10; */
+        right: 20%;
+        /* right: 0; */
+    }
+    .bubble::before{
+        left: 40%;
+    }
+    .cat-picture{
+        width: 65%;
+        height: 50%;
+    }
+}
+
+@media (max-width:600px) {
+    .cat-picture{
+        width: 82%;
+        height: 47%;
+    }   
+    main{
+        /* background-color: #000; */
+        width: 95%;
+    }
+    .buttons{
+        width: 80%;
+    }
+    button{
+        height: 55%;
+    }
+    .bubble{
+        font-size: 1.6rem;
+        width: 95%;
+        /* left: 10%; */
+        right: 10%;
+    }
+
+}
+@media (max-width:450px) {
+
+    .cat-picture{
+        width: 90%;
+        height: 47%;
+    } 
+}
+/* @media screen and (min-height:650px) and (max-height:950px) {
+    .cat-picture{
+        width: 90%;
+        height: 44%;
+    }   
+    .buttons{
+        height: 35%;
+    }
+    button{
+        height: 40%;
+    }
+    .bubble{
+        width: 90%;
+        right: 15%;
+    }
+} */
